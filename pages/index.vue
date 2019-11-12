@@ -6,7 +6,7 @@
         storyblok-blog
       </h1>
       <h2 class="subtitle">
-        A blog built with Nuxt.js and SToryblok for CMS Handling
+        A blog built with Nuxt.js and Storyblok for CMS Handling
       </h2>
       <div class="links">
         <a
