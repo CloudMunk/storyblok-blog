@@ -1,20 +1,32 @@
 <template>
     <section id="about-page">
-        <h1>Hello, this is our about page!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Repellendus quos amet quam commodi perferendis sunt, quaerat 
-            eveniet voluptas magni repudiandae perspiciatis itaque nihil 
-            placeat animi. Maxime ipsa quisquam sed excepturi.
-        </p>
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
     </section>
 </template>
 
 <script>
 export default {
-    
+    asyncData(context) {
+        return context.app.$storyapi.get('cdn/stories/about', {
+            version: 'draft'
+        }).then(res => {
+            return {
+                title: res.data.story.content.title,
+                content: res.data.story.content.content
+            }
+        })
+    },
 }
 </script>
 
 <style scoped>
-
+    #about-page {
+        width: 80%;
+        max-width: 500px;
+        margin: auto;
+    }
+    #about-page p {
+        white-space: pre-line;
+    }
 </style>
