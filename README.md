@@ -1,6 +1,6 @@
 # storyblok-blog
 
-> A blog built with Nuxt.js and SToryblok for CMS Handling
+> A blog built with Nuxt.js and Storyblok for CMS Handling
 
 ## Build Setup
 
