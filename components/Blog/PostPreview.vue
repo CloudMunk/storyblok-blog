@@ -3,16 +3,16 @@
         <nuxt-link
             :to="id"
         >
-            <article class="post-preview">
-            <div
-                :style="{backgroundImage: 'url(' + thumbnailImage + ')' }" 
-                class="post-preview-thumbnail">
-            </div>
-            <div class="post-preview-content">
-                <h1>{{ title }}</h1>
-                <p>{{ excerpt }}</p>
-            </div>
-            </article>
+                <article class="post-preview">
+                <div
+                    :style="{backgroundImage: 'url(' + thumbnailImage + ')' }" 
+                    class="post-preview-thumbnail">
+                </div>
+                <div class="post-preview-content">
+                    <h1>{{ title }}</h1>
+                    <p>{{ excerpt }}</p>
+                </div>
+                </article>
         </nuxt-link>
         
     </div>
@@ -66,9 +66,8 @@ export default {
     }
     @media (min-width: 35rem) {
         .post-preview {
-            width: 40%;
-            margin: auto;
-            
+            min-width: 70%;
+            max-width: 300px;
         }
     }
 </style>

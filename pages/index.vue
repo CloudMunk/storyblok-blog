@@ -6,8 +6,7 @@
       :title="post.title"
       :excerpt="post.previewText"
       :thumbnailImage="post.thumbnailUrl"
-      :id="post.id"
-      style="width: 100%;"
+      :id="post.id"    
     />
   </section>
 </template>
@@ -54,7 +53,7 @@ export default {
           justify-content: center;
           align-items: center;
           flex-direction: row;
-          
+          flex-wrap: wrap;
         }
     }
 </style>
